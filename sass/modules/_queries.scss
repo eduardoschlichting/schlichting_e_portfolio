@@ -1,0 +1,178 @@
+// Typography
+
+    // Desktop
+
+    @media screen and (min-width: 1280px) {
+        h2 {
+            font-size: 3.3rem;
+            line-height: 4rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            line-height: 3rem;
+        }
+         
+        h4 { 
+            font-size: 1.25rem;
+        }
+
+        h5 {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+            line-height: 3rem;
+        }
+
+    }
+
+
+    // menu btn
+
+    @media screen and (min-width: 960px) {    
+    .menu-btn {
+          height: 20px;
+          width: 35px;
+      
+          &__burger {
+            width: 35px;
+            height: 3px;
+        
+            &::before {
+            top: -12px;
+              width: 35px;
+              height: 3px;
+            }
+        
+            &::after {
+              top: 12px;
+              width: 35px;
+              height: 3px;
+            }
+
+            &.open {
+          
+                &::before {
+                  transform: rotate(45deg) translate(5px, 10px);
+                }
+          
+                &::after {
+                  transform: rotate(-45deg) translate(7px, -13px);
+                }
+              }
+          }
+
+          
+        }
+    };
+    
+    // links fixed
+
+    @media screen and (max-width: 960px) {
+        .links-fixed {
+            display: none;
+        }
+    }
+
+    // Home intro
+
+    @media screen and (min-width: 960px) {
+        .nav-wrapper {
+            width: 90%;
+
+           #imgLogo {
+                width: 80px;
+            }
+        }
+
+        .home-wrapper {
+            width: 90%;
+            margin: 0 auto;
+
+            .home__intro {
+                .home-header {
+                    flex-direction: row;
+                    align-items: center;
+
+                    .home-content {
+                        p {
+                            width: 85%;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .projects, .other-projects, .skills, .contact-cta {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .projects {
+        width: 90%;
+        margin: 0 auto;
+
+        .project-box__wrapper {
+            width: 90%;
+
+            .project-box {
+                height: 300px;
+
+                &__link {
+                    width: 70px;
+    
+                    img {
+                        width: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    .other-projects, .skills, .contact-cta {
+        margin-top: 6em;
+    }
+
+    .skills {
+
+        .skills-wrapper {
+            flex-direction: row;
+
+        }
+    }
+    .contact-cta {
+        .contact-wrapper {
+            p {
+                width: 70%;
+            }
+        }
+    }
+    
+    button {
+        padding: 20px 60px;
+        @include transition-ease;
+
+        &:hover {
+            background-color: $blue;
+            color: $purple;
+        }
+    }
+
+    footer {
+
+        div {
+            margin-left: 4em;
+            flex-direction: row;
+            align-items: center;
+
+            p {
+                padding-left: 3em;
+                font-size: 1.25rem;
+                color: $purple;
+            }
+          }
+    }
+}

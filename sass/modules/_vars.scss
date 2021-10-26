@@ -1,0 +1,67 @@
+// Colors
+
+$background: #070a36;
+$white: #e5e1e6;
+$blue: #48dcfe;
+$purple: #7983ff;
+
+// Typography
+
+    $main-type: 'DM Sans', Helvetica, sans-serif;
+    $regular: 400;
+    $medium: 500;
+    $bold: 700;
+    // Mobile
+    a {
+        font-family: $main-type;
+    }
+
+    h2 {
+        color: $purple;
+        font-size: 2rem;
+        font-weight: $bold;
+        line-height: 2.625rem;
+    }
+
+    h3 {
+        color: $blue;
+        font-size: 1.25rem;
+        font-weight: $regular;
+        line-height: 1.875rem;
+    }
+
+    // use for the scroll down
+    h4 { 
+        color: $white;
+        font-size: 0.8rem;
+        font-weight: $regular;
+        line-height: 1.875rem;
+    }
+
+    h5 {
+        color: $white;
+        font-size: 0.75rem;
+    }
+
+    p {
+        color: $white;
+        font-size: 1.25rem;
+        font-weight: $regular;
+        line-height: 1.875rem;
+    }
+
+// helper classes
+
+.hidden {
+    display: none;
+}
+
+button {
+    border: 1px solid $blue;
+    background: none;
+    padding: 10px 40px;
+    color: $blue;
+    font-weight: $bold;
+    margin-right: auto;
+}
+    

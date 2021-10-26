@@ -4,9 +4,345 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
+
     <title>Eduardo Schlichting - Front-end Web Developer</title>
 </head>
 <body>
     
+    <main>
+        <h1 class="hidden">Dui - Front-end Web Developer</h1>
+
+        <header class="nav-wrapper">
+          <h1 class="hidden">Header - Nav</h1>
+
+            <div class="logo-dui-nav">
+                <a href="index.html">
+                <img src="dist/logo-mobile-purple.svg" id="imgLogo" alt="Logo Dui">
+                </a>
+            </div>
+
+            <div class="menu-btn">
+              <span class="menu-btn__burger"></span>
+            </div>
+          </header>
+        
+            <nav class="nav">
+              <h2 class="hidden">Nav - mobile</h2>
+              <ul class="menu-nav">
+                <li class="menu-nav__item">
+                  <a href="index.html" class="menu-nav__link">
+                    Work.
+                  </a>
+                </li>
+                
+                <li class="menu-nav__item">
+                  <a class="menu-nav__link">
+                    About me.
+                  </a>
+                </li>
+
+                <li class="menu-nav__item">
+                  <a href="contact.html" class="menu-nav__link">
+                    Contact me.
+                  </a>
+                </li>
+
+                <li class="menu-nav__item">
+                  <div>
+                    <img src="dist/logo-footer-purple-m.svg" alt="Logo footer">
+                    <p>Made with <span><3</span> by Eduardo Schlichting - 2021</p>
+                  </div>
+                </li>
+              </ul>
+
+              
+            </nav>
+
+        <section class="home-wrapper">
+          <div class="home__intro">
+            <div class="home-header">
+              <div class="home-content">
+                <h3>Hello There!</h3>
+                <h2>I'm Eduardo, but you can call me Dui :D</h2>
+                <p>I’m a designer and front-end web developer based in London, Ontario. I like to create cool, beautiful and functional stuff for the internet.</p>
+              </div>
+              
+            
+            <div class="avatar">
+              <!-- <img src="dist/memoji-m.png" alt="Memoji Dui"> -->
+
+              <img srcset="dist/memoji-m.png 400w,
+             dist/memoji.png 800w" sizes="(max-width: 600px) 300px, 500px" src="dist/memoji.png" alt="Memoji">
+
+            </div>
+          </div> 
+            
+            
+
+            <div class="scroll-down">
+              <h4>scroll down</h4>
+              <img src="dist/arrow-mobile.svg" alt="Arrow Scroll Down">
+            </div>
+          
+        </section>
+
+        <section class="links-fixed">
+          <div class="links">
+            <a><img src="dist/linkedin-logo.svg" alt="Linkedin Link"></a>
+            <a><img src="dist/behance-logo.svg" alt="Behance Link"></a>
+            <a><img src="dist/github-link.svg" alt="Github Link"></a>
+            <img class="line" src="dist/line.svg" alt="line">
+          </div>
+        </section>
+
+       <!-- Projects Section: Mock usability/elements, fill with Vue -->
+
+        <section class="projects">
+
+          <div class="project-titles">
+            <h2>My Work</h2>
+            <h3>Featured Projects</h3>
+          </div>
+
+          <div class="project-box__wrapper">
+          
+            <div class="project-box">
+              <div class="project-box__link">
+                <a href="#">
+                  <img src="dist/external-link-m.svg" alt="External Link">
+                </a>
+
+                <a href="#">
+                  <img src="dist/github-icon-m.svg" alt="github icon">
+                </a>
+              </div>
+              <div class="project-box__content">
+                <h3 class="project-heading">
+                  Project 1
+                </h3>
+                <div class="project-tag">
+                  <h5 class="project-tag__item">HTML</h5>
+                  <h5 class="project-tag__item">SASS</h5>
+                  <h5 class="project-tag__item">JS</h5>
+                </div>
+                
+              </div>
+            </div>
+            <div class="project-box">
+              <div class="project-box__link">
+                <a href="#">
+                  <img src="dist/external-link-m.svg" alt="External Link">
+                </a>
+
+                <a href="#">
+                  <img src="dist/github-icon-m.svg" alt="github icon">
+                </a>
+              </div>
+              <div class="project-box__content">
+                <h3 class="project-heading">
+                  Project 1
+                </h3>
+                <div class="project-tag">
+                  <h5 class="project-tag__item">HTML</h5>
+                  <h5 class="project-tag__item">SASS</h5>
+                  <h5 class="project-tag__item">JS</h5>
+                </div>
+                
+              </div>
+            </div>
+            <div class="project-box">
+              <div class="project-box__link">
+                <a href="#">
+                  <img src="dist/external-link-m.svg" alt="External Link">
+                </a>
+
+                <a href="#">
+                  <img src="dist/github-icon-m.svg" alt="github icon">
+                </a>
+              </div>
+              <div class="project-box__content">
+                <h3 class="project-heading">
+                  Project 1
+                </h3>
+                <div class="project-tag">
+                  <h5 class="project-tag__item">HTML</h5>
+                  <h5 class="project-tag__item">SASS</h5>
+                  <h5 class="project-tag__item">JS</h5>
+                </div>
+                
+              </div>
+            </div>
+        </section>
+
+
+        <section class="other-projects">
+          
+          <div class="other-titles">
+            <h2>Other Projects</h2>
+            <h3>Noteworthy projects</h3>
+          </div>
+
+          <div class="other-box__wrapper">
+
+            
+
+            <div class="project-box__other">
+              <div class="other-project-box__link">
+                <a href="#">
+                  <img src="dist/external-link-m.svg" alt="External Link">
+                </a>
+
+                <a href="#">
+                  <img src="dist/github-icon-m.svg" alt="github icon">
+                </a>
+              </div>
+              <div class="project-box__content">
+                <h3 class="project-heading">
+                  Project 1
+                </h3>
+                <div class="other-project-tag">
+                  <h5 class="other-project-tag__item">HTML</h5>
+                  <h5 class="other-project-tag__item">SASS</h5>
+                  <h5 class="other-project-tag__item">JS</h5>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="project-box__other">
+              <div class="other-project-box__link">
+                <a href="#">
+                  <img src="dist/external-link-m.svg" alt="External Link">
+                </a>
+
+                <a href="#">
+                  <img src="dist/github-icon-m.svg" alt="github icon">
+                </a>
+              </div>
+              <div class="project-box__content">
+                <h3 class="project-heading">
+                  Project 1
+                </h3>
+                <div class="other-project-tag">
+                  <h5 class="other-project-tag__item">HTML</h5>
+                  <h5 class="other-project-tag__item">SASS</h5>
+                  <h5 class="other-project-tag__item">JS</h5>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="project-box__other">
+              <div class="other-project-box__link">
+                <a href="#">
+                  <img src="dist/external-link-m.svg" alt="External Link">
+                </a>
+
+                <a href="#">
+                  <img src="dist/github-icon-m.svg" alt="github icon">
+                </a>
+              </div>
+              <div class="project-box__content">
+                <h3 class="project-heading">
+                  Project 1
+                </h3>
+                <div class="other-project-tag">
+                  <h5 class="other-project-tag__item">HTML</h5>
+                  <h5 class="other-project-tag__item">SASS</h5>
+                  <h5 class="other-project-tag__item">JS</h5>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="project-box__other">
+              <div class="other-project-box__link">
+                <a href="#">
+                  <img src="dist/external-link-m.svg" alt="External Link">
+                </a>
+
+                <a href="#">
+                  <img src="dist/github-icon-m.svg" alt="github icon">
+                </a>
+              </div>
+              <div class="project-box__content">
+                <h3 class="other-project-heading">
+                  Project 1
+                </h3>
+                <div class="other-project-tag">
+                  <h5 class="other-project-tag__item">HTML</h5>
+                  <h5 class="other-project-tag__item">SASS</h5>
+                  <h5 class="other-project-tag__item">JS</h5>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </section>
+        
+
+        <section class="skills">
+
+          <div class="skills-title">
+            <h2>Some stuff I know how to do</h2>
+          </div>
+          
+
+          <div class="skills-wrapper">
+
+            
+
+            <div class="skills-wrapper__item">
+              <h3>Design</h3>
+              <p>Brand Identity</p>
+              <p>UX/UI Design</p>
+              <p>Motion Design</p>
+              <p>Web Design</p>
+            </div>
+            <div class="skills-wrapper__item">
+              <h3>Web Development</h3>
+              <p>Front-end development</p>
+              <p>back-end development</p>
+            </div>
+            <div class="skills-wrapper__item">
+              <h3>Web Languages I speak</h3>
+              <p>HTML</p>
+              <p>CSS/SASS</p>
+              <p>JavaScript</p>
+              <p>Vue.Js</p>
+              <p>Node.js</p>
+              <p>PHP</p>
+              <p>MySql</p>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="contact-cta">
+          <div class="contact-wrapper">
+            <h2>Let's Work together!</h2>
+            <p>You have an amazing (or crazy) idea for your next web project? Let’s build something awesome!</p>
+            <P>Simply send me an message with your inquire. I promise to respond asap!</p>
+            <button>contact me</button>
+          </div>
+          
+        </section>
+        
+        <footer>
+          <div>
+            <img src="dist/logo-footer-purple-m.svg" alt="Logo footer">
+            <p>Made with <span><3</span> by Eduardo Schlichting - 2021</p>
+          </div>
+        </footer>
+      
+    </main>
+
+    <script type="module" src="js/main.js" defer></script>
 </body>
 </html>
