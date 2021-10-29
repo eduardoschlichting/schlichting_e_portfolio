@@ -1,31 +1,29 @@
-@import 'modules/reset';
-@import 'modules/vars';
+@import "modules/reset";
+@import "modules/vars";
 // @import 'modules/queries';
 
-@import 'modules/nav';
-@import 'modules/home';
-@import 'modules/queries';
-
+@import "modules/nav";
+@import "modules/home";
+@import "modules/queries";
 
 html {
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
-    position: relative;
-    font-size: 16px;
-    background-color: $background;
-    font-family: $main-type;
+  position: relative;
+  font-size: 16px;
+  background-color: $background;
+  font-family: $main-type;
 
-    margin: 0 auto;
-	width: 100%;
-	min-height: 100vh;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 100vh;
 
-	overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 main {
-    margin: 0 38px;
+  margin: 0 38px;
 }
-
