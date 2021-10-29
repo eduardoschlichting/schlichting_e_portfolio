@@ -53,10 +53,35 @@
     padding-bottom: 12px;
   }
 }
+.text-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 4%;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5em;
+
+  .link {
+    // margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5em;
+    
+    p {
+      transform: rotate(-90deg);
+      transform-origin: center;
+      font-size: 1rem;
+      color: $blue;
+      
+    }
+  }
+}
 .links-fixed {
   position: fixed;
-  top: 45%;
+  bottom: 0;
   left: 92%;
 //   width: fit-content;
   display: flex;
@@ -70,7 +95,7 @@
 
     a {
       margin: 0 auto;
-      width: 75%;
+      width: 60%;
 
       img {
         width: 100%;
@@ -112,68 +137,6 @@
     justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(350px, auto));
     gap: 10px;
-
-    .project-box {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-      background-image:
-      -webkit-linear-gradient(90deg, rgba(7, 10, 54, .5), rgba(7, 10, 54, .2)),
-      url('../dist/projimg.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      
-      width: 95%;
-      height: 200px;
-
-      margin-top: 1em;
-
-    //   border: 2px solid $purple;
-    border-radius: 8px;
-      padding: 20px 24px;
-
-      @include transition-ease;
-
-      &__link {
-        align-self: flex-end;
-        width: 50px;
-        display: flex;
-        justify-content: space-between;
-
-        img {
-          width: 18px;
-          @include transition-ease;
-        }
-
-        img:hover {
-            scale: 1.2;
-         }
-      }
-
-      &__content {
-
-        .project-heading {
-          margin-bottom: 0.5em;
-          color: $white;
-          font-weight: $bold;
-        }
-        .project-tag {
-          width: 30%;
-          display: flex;
-          justify-content: space-around;
-        }
-      }
-
-      
-      
-    }
-
-    .project-box:hover {
-        transform: scale(1.06);
-        border: 2px solid $purple;
-    }
   }
 }
 

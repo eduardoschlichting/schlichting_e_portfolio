@@ -1,0 +1,56 @@
+// main box
+@import "vars";
+@import "mixins";
+
+.project-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    padding: 0;
+
+    background-image: url('../dist/projimg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    width: 95%;
+    height: 200px;
+
+    margin-top: 1em;
+
+  //   border: 2px solid $purple;
+  border-radius: 8px;
+    padding: 0;
+
+    @include transition-ease;
+
+    &__content {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include transition-ease;
+        opacity: 0;
+      h3 {
+        color: $white;
+        font-weight: $bold;
+        line-height: 1rem;
+      }
+    }
+
+    &__content:hover {
+        opacity: 1;
+        background-color: rgba($background, 0.3);
+    }
+
+  }
+
+  .project-box:hover {
+      transform: scale(1.06);
+    //   border: 2px solid $purple;
+  }
