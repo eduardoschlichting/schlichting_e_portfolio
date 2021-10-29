@@ -15,7 +15,7 @@
 </head>
 <body>
     
-    <main>
+    <main id="app">
         <h1 class="hidden">Dui - Front-end Web Developer</h1>
 
         <header class="nav-wrapper">
@@ -25,12 +25,12 @@
                 <a href="index.html">
                 <!-- <img src="dist/logo-mobile-purple.svg" id="imgLogo" alt="Logo Dui"> -->
 
-                <img srcset="dist/logo-mobile-purple.svg 400w,
-                dist/logo_dui_d.svg 900w" sizes="(max-width: 600px) 400px, 600px" src="dist/logo_dui_d.svg" alt="Memoji">
+                <img srcset="dist/logo-mobile-purple.svg 500w,
+                dist/logo_dui_d.svg 900w" sizes="(max-width: 600px) 500px, 600px" src="dist/logo_dui_d.svg" alt="Memoji">
                 </a>
             </div>
 
-            <div class="menu-btn">
+            <div class="menu-btn" v-on:click="menu">
               <span class="menu-btn__burger"></span>
             </div>
           </header>
@@ -102,6 +102,17 @@
           </div>
         </section>
 
+        <section class="text-fixed">
+          <div class="link">
+            
+            <p>Design.</p>
+            <p>Motion.</p>
+            <p>Front-end.</p>
+          </div>
+
+          <img class="line" src="dist/line.svg" alt="line">
+        </section>
+
        <!-- Projects Section: Mock usability/elements, fill with Vue -->
 
         <section class="projects">
@@ -112,110 +123,18 @@
           </div>
 
           <div class="project-box__wrapper">
-          
+
+            <!-- <thumb></thumb> -->
+            
             <div class="project-box">
 
-              <div class="project-box__link">
-                <a href="#">
-                  <img src="dist/external-link-m.svg" alt="External Link">
-                </a>
-
-                <a href="#">
-                  <img src="dist/github-icon-m.svg" alt="github icon">
-                </a>
-              </div>
-
               <div class="project-box__content">
-                <h3 class="project-heading">
-                  Project 1
-                </h3>
-                
-                <div class="project-tag">
-                  <h5 class="project-tag__item">HTML</h5>
-                  <h5 class="project-tag__item">SASS</h5>
-                  <h5 class="project-tag__item">JS</h5>
-                </div>
-                
+                <h3 class="project-heading">Project 1</h3>
+                <h4>year</h4>
               </div>
-            </div>
-
-            <div class="project-box">
-
-              <div class="project-box__link">
-                <a href="#">
-                  <img src="dist/external-link-m.svg" alt="External Link">
-                </a>
-
-                <a href="#">
-                  <img src="dist/github-icon-m.svg" alt="github icon">
-                </a>
-              </div>
-
-              <div class="project-box__content">
-                <h3 class="project-heading">
-                  Project 1
-                </h3>
-
-                <div class="project-tag">
-                  <h5 class="project-tag__item">HTML</h5>
-                  <h5 class="project-tag__item">SASS</h5>
-                  <h5 class="project-tag__item">JS</h5>
-                </div>
-                
-              </div>
-            </div>
-
-            <div class="project-box">
-
-              <div class="project-box__link">
-                <a href="#">
-                  <img src="dist/external-link-m.svg" alt="External Link">
-                </a>
-
-                <a href="#">
-                  <img src="dist/github-icon-m.svg" alt="github icon">
-                </a>
-              </div>
-
-              <div class="project-box__content">
-                <h3 class="project-heading">
-                  Project 1
-                </h3>
-
-                <div class="project-tag">
-                  <h5 class="project-tag__item">HTML</h5>
-                  <h5 class="project-tag__item">SASS</h5>
-                  <h5 class="project-tag__item">JS</h5>
-                </div>
-                
-              </div>
-            </div>
-
-            <div class="project-box">
-
-              <div class="project-box__link">
-                <a href="#">
-                  <img src="dist/external-link-m.svg" alt="External Link">
-                </a>
-
-                <a href="#">
-                  <img src="dist/github-icon-m.svg" alt="github icon">
-                </a>
-              </div>
-
-              <div class="project-box__content">
-                <h3 class="project-heading">
-                  Project 1
-                </h3>
-
-                <div class="project-tag">
-                  <h5 class="project-tag__item">HTML</h5>
-                  <h5 class="project-tag__item">SASS</h5>
-                  <h5 class="project-tag__item">JS</h5>
-                </div>
-                
-              </div>
-            </div>
+              
+          </div>
+            
         </section>
 
 
@@ -228,100 +147,9 @@
 
           <div class="other-box__wrapper">
 
+             <!-- <otherthumb></otherthumb> -->
+
             
-
-            <div class="project-box__other">
-              <div class="other-project-box__link">
-                <a href="#">
-                  <img src="dist/external-link-m.svg" alt="External Link">
-                </a>
-
-                <a href="#">
-                  <img src="dist/github-icon-m.svg" alt="github icon">
-                </a>
-              </div>
-              <div class="project-box__content">
-                <h3 class="other-project-heading">
-                  Project 1
-                </h3>
-                <div class="other-project-tag">
-                  <h5 class="other-project-tag__item">HTML</h5>
-                  <h5 class="other-project-tag__item">SASS</h5>
-                  <h5 class="other-project-tag__item">JS</h5>
-                </div>
-                
-              </div>
-            </div>
-
-            <div class="project-box__other">
-              <div class="other-project-box__link">
-                <a href="#">
-                  <img src="dist/external-link-m.svg" alt="External Link">
-                </a>
-
-                <a href="#">
-                  <img src="dist/github-icon-m.svg" alt="github icon">
-                </a>
-              </div>
-              <div class="project-box__content">
-                <h3 class="other-project-heading">
-                  Project 1
-                </h3>
-                <div class="other-project-tag">
-                  <h5 class="other-project-tag__item">HTML</h5>
-                  <h5 class="other-project-tag__item">SASS</h5>
-                  <h5 class="other-project-tag__item">JS</h5>
-                </div>
-                
-              </div>
-            </div>
-
-            <div class="project-box__other">
-              <div class="other-project-box__link">
-                <a href="#">
-                  <img src="dist/external-link-m.svg" alt="External Link">
-                </a>
-
-                <a href="#">
-                  <img src="dist/github-icon-m.svg" alt="github icon">
-                </a>
-              </div>
-              <div class="project-box__content">
-                <h3 class="other-project-heading">
-                  Project 1
-                </h3>
-                <div class="other-project-tag">
-                  <h5 class="other-project-tag__item">HTML</h5>
-                  <h5 class="other-project-tag__item">SASS</h5>
-                  <h5 class="other-project-tag__item">JS</h5>
-                </div>
-                
-              </div>
-            </div>
-
-            <div class="project-box__other">
-              <div class="other-project-box__link">
-                <a href="#">
-                  <img src="dist/external-link-m.svg" alt="External Link">
-                </a>
-
-                <a href="#">
-                  <img src="dist/github-icon-m.svg" alt="github icon">
-                </a>
-              </div>
-              <div class="project-box__content">
-                <h3 class="other-project-heading">
-                  Project 1
-                </h3>
-                <div class="other-project-tag">
-                  <h5 class="other-project-tag__item">HTML</h5>
-                  <h5 class="other-project-tag__item">SASS</h5>
-                  <h5 class="other-project-tag__item">JS</h5>
-                </div>
-                
-              </div>
-            </div>
-          </div>
         </section>
         
 
@@ -381,6 +209,7 @@
       
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script type="module" src="js/main.js" defer></script>
 </body>
 </html>

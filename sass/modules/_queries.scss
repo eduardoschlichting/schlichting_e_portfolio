@@ -4,17 +4,17 @@
 
 @media screen and (min-width: 1280px) {
   h2 {
-    font-size: 3.3rem;
+    font-size: 3rem;
     line-height: 4rem;
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 3rem;
   }
 
   h4 {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   h5 {
@@ -22,8 +22,8 @@
   }
 
   p {
-    font-size: 1.5rem;
-    line-height: 3rem;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
   }
 }
 
@@ -66,9 +66,13 @@
 // links fixed
 
 @media screen and (max-width: 960px) {
-  .links-fixed {
+  main {
+    margin: 0 4em;
+  }
+  .links-fixed, .text-fixed {
     display: none;
   }
+  
 }
 
 // Home intro
@@ -82,7 +86,7 @@
     
         &__item {
           .menu-nav__link {
-            padding: 0 1em;
+            padding: 0 .5em;
             font-size: 3rem;
           }
         }
@@ -97,7 +101,7 @@
     }
 
   .home-wrapper {
-    width: 90%;
+    width: 91%;
     margin: 0 auto;
 
     .home__intro {
@@ -106,10 +110,16 @@
         align-items: center;
 
         .home-content {
-          p {
-            width: 85%;
-          }
+          width: 50%;
+          // p {
+          //   width: 600%;
+          // }
         }
+      }
+      .avatar {
+
+          margin: 0;
+        
       }
     }
   }
@@ -120,11 +130,14 @@
   .contact-cta {
     width: 90%;
     margin: 0 auto;
+    text-align: center;
   }
 
   .projects {
     width: 90%;
     margin: 0 auto;
+    padding-top: 3em;
+    
 
     .project-box__wrapper {
       width: 90%;
@@ -154,12 +167,19 @@
   .skills {
     .skills-wrapper {
       flex-direction: row;
+      justify-content: center;
+      gap: 5em;
     }
   }
   .contact-cta {
+
     .contact-wrapper {
+      align-items: center;
       p {
-        width: 70%;
+        width: 50%;
+      }
+      button {
+        margin: 0;
       }
     }
   }
@@ -175,8 +195,12 @@
   }
 
   footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+
     div {
-      margin-left: 4em;
+      
       flex-direction: row;
       align-items: center;
 
