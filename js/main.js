@@ -1,7 +1,8 @@
 import { toggleMenu } from "./components/menu.js";
 import { getData } from "./components/TheDataMiner.js";
-import TheThumbnail from "./components/Thumbnail.js";
+import TheThumbnail from "./components/thumbnail.js";
 import TheOtherThumbnail from "./components/otherThumbnail.js";
+import TheLightbox from "./components/lightbox.js";
 
 (() => {
 //   const menuBtn = document.querySelector(".menu-btn");
@@ -19,15 +20,20 @@ import TheOtherThumbnail from "./components/otherThumbnail.js";
         // this is storing the database info from our fetch call
         // portfolioData: [],
         // message: "hello from Vue"
+        
     },
 
     methods: {
-        menu: toggleMenu
-        },
+        menu: toggleMenu,
+        openBox() {
+            this.classlist.add('open-lightbox');
+        } 
+    },
 
     components: {
         'thumb': TheThumbnail,
-        'otherthumb': TheOtherThumbnail
+        'otherthumb': TheOtherThumbnail,
+        'lightbox': TheLightbox
         }
     }).$mount("#app");
 })();
