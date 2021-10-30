@@ -38,6 +38,7 @@
         @include transition-ease;
         opacity: 1;
         background-color: rgba($background, 0.1);
+        -webkit-appearance: none;
       h3 {
         color: $white;
         font-weight: $bold;
