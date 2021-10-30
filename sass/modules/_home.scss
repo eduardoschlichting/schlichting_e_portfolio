@@ -75,7 +75,12 @@
       transform-origin: center;
       font-size: 1rem;
       color: $blue;
+      @include transition-ease;
       
+    }
+
+    p:hover {
+      scale: 1.2;
     }
   }
 }
