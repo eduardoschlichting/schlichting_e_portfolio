@@ -13,7 +13,7 @@
     position: relative;
 
     h2 {
-      width: 90%;
+      width: 100%;
     }
 
     .home-header {
@@ -88,32 +88,30 @@
   position: fixed;
   bottom: 0;
   left: 92%;
-//   width: fit-content;
+
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 3.5em;
 
   .links {
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
+    gap: 3em;
 
     a {
       margin: 0 auto;
-      width: 60%;
+      width: 80%;
 
       img {
         width: 100%;
         @include transition-ease;
-      }
-      img:hover {
-         scale: 1.2;
-      }
-    }
 
-    .line {
-      width: 3px;
-      margin: 0 auto;
+        &:hover {
+          scale: 1.2;
+        }
+      }
     }
   }
 }
@@ -141,7 +139,7 @@
     place-items: center;
     justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(350px, auto));
-    gap: 10px;
+    gap: 5px;
   }
 }
 
@@ -163,62 +161,9 @@
 
     gap: 15px;
 
-    .project-box__other {
-      width: 100%;
-      height: 250px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-      background-image:
-      -webkit-linear-gradient(90deg, rgba(7, 10, 54, .5), rgba(7, 10, 54, .2)),
-      url('../dist/kavorka.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-
-      // margin-top: 1em;
-
-    //   border: 2px solid $purple;
-    border-radius: 8px;
-      padding: 20px 24px;
-
-      @include transition-ease;
-    }
-
-    .project-box__other:hover {
-        transform: scale(1.06);
-        border: 2px solid $blue;
-    }
-
-    .other-project-box__link {
-      align-self: flex-end;
-      width: 50px;
-      display: flex;
-      justify-content: space-between;
-
-      img {
-        width: 18px;
-      }
-    }
-
-    .other-project-heading {
-    //   margin-bottom: 0.5em;
-      color: $white;
-      font-weight: $bold;
-    }
-
-    .other-project-tag {
-      width: 50%;
-      display: grid;
-      padding-left: 10px;
-      padding-top: 10px;
-
-      grid-template-columns: min-content min-content min-content;
-      gap: 8px;
     }
   }
-}
+
 
 .skills {
   margin-top: 2.5em;
