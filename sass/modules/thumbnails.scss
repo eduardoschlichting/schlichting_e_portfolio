@@ -3,80 +3,96 @@
 @import "mixins";
 
 .project-box {
-    position: relative;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  padding: 0;
+  width: 95%;
+  height: 200px;
+  margin-top: 1em;
+
+  background-image: url("../dist/projimg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  // border-radius: 8px;
+  
+  @include transition-ease;
+}
+
+.project-box__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  @include transition-ease;
+  opacity: 1;
+  background-color: rgba($background, 0.3);
+
+  h3 {
+    color: $white;
+    font-weight: $bold;
+    line-height: 1rem;
+  }
+}
+
+// other projects
+
+.other {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  padding: 0;
+
+  background-image: url("../dist/kavorka.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  // border-radius: 8px;
+
+  @include transition-ease;
+
+}
+
+@media screen and (min-width: 960px) {
+  .project-box__content {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-self: center;
-    padding: 0;
-
-    background-image: url('../dist/projimg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    
-    width: 95%;
-    height: 200px;
-
-    margin-top: 1em;
-
-  //   border: 2px solid $purple;
-  border-radius: 8px;
-    padding: 0;
-
     @include transition-ease;
+    opacity: 0;
 
-    &__content {
-        width: 100%;
-        height: 100%;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        @include transition-ease;
-        opacity: 1;
-        background-color: rgba($background, 0.1);
-        
-      h3 {
-        color: $white;
-        font-weight: $bold;
-        line-height: 1rem;
-      }
+    h3 {
+      color: $white;
+      font-weight: $bold;
+      line-height: 1rem;
     }
+  }
 
+  .project-box__content:hover {
+    opacity: 1;
+    background-color: rgba($background, 0.3);
+  }
 
-  @media screen and (min-width: 960px) {
-    .project-box {
-    
-        &__content {
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            @include transition-ease;
-            opacity: 0;
-          h3 {
-            color: $white;
-            font-weight: $bold;
-            line-height: 1rem;
-          }
-        }
-    
-        &__content:hover {
-            opacity: 1;
-            background-color: rgba($background, 0.3);
-        }
-    
-      }
-    
-      .project-box:hover {
-          transform: scale(1.06);
-        //   border: 2px solid $purple;
-      }
+  .project-box, .other {
+    &:hover {
+      transform: scale(1.06);
+    }
   }
 }

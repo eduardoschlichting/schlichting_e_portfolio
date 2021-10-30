@@ -166,6 +166,11 @@
     }
   }
 
+  .other-projects {
+    .other-box__wrapper {
+      max-width: 100%;
+    }
+  }
   .other-projects,
   .skills,
   .contact-cta {
@@ -217,6 +222,15 @@
         font-size: 1.25rem;
         color: $purple;
       }
+    }
+  }
+}
+
+
+@media screen and (min-width: 1800px) {
+  .other-projects {
+    .other-box__wrapper {
+      max-width: 70%;
     }
   }
 }
