@@ -11,7 +11,7 @@
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
-  -webkit-appearance: none;
+  -webkit-appearance: none; // safari bug
 }
 
 body {
