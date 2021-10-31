@@ -128,7 +128,7 @@
 
           <div class="project-box__wrapper">
 
-            <thumb @click="openBox"></thumb>
+            <thumb></thumb>
             <thumb ></thumb>
             <thumb></thumb>
             <thumb></thumb>
@@ -153,6 +153,8 @@
         </section>
         
         <section class="lightbox">
+
+          <lightbox v-if="showBox"></lightbox>
           <!-- <div class="lightbox-wrapper">
             <div class="close-btn">
               <span class="close-btn__x"></span>

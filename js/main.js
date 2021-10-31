@@ -21,13 +21,13 @@ import TheLightbox from "./components/lightbox.js";
         // portfolioData: [],
         // message: "hello from Vue"
         
+        showBox: false
+
     },
 
     methods: {
-        menu: toggleMenu,
-        openBox() {
-            this.classlist.add('open-lightbox');
-        } 
+        
+        menu: toggleMenu
     },
 
     components: {
