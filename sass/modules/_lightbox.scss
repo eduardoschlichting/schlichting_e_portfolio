@@ -12,6 +12,7 @@
     display: none;
     align-items: center;
     justify-content: center;
+    
 
     &-wrapper {
         background-color: $white;
@@ -21,11 +22,14 @@
         height: 90%;
         margin: 0 auto;
         box-shadow: 0px 10px 15px 10px rgba(121,131,255,0.2);
+        overflow-y: scroll;
+        overflow-x: hidden;
+        
 
         .close-btn {
             align-self: flex-end;
             display: block;
-            position: relative;
+            position: absolute;
             height: 30px;
             width: 30px;
             padding: 3em;
@@ -59,9 +63,73 @@
                 }
               }
         }
+
+        .content {
+            width: 100%;
+            margin: 0 auto;
+            padding: 5em 2em 0 2em;
+
+            a {
+                text-decoration: none;
+            }
+
+            h2 {
+                margin-bottom: 0;
+            }
+            h3 {
+                color: $purple;
+                padding-left: 2em;
+            }
+
+            p {
+                
+                color: $background;
+            }
+
+            .desc_1 {
+                padding-top: 1em;
+            }
+
+            img {
+                width: 100%;
+                padding: 1em 0;
+            }
+
+            .tags {
+                padding-left: 2em;
+                display: flex;
+                
+
+                p {
+                    
+                    width: fit-content;
+                }
+            }
+        }
     }   
 }
 
-.open-lightbox {
+.visible {
     display: flex;
+}
+
+@media screen and (min-width: 960px) {
+    .lightbox-wrapper {
+        .content {
+            width: 90%;
+
+            img {
+                padding: 2em 0;
+            }
+
+            p {
+                padding-left: 2em;
+                width: 80%;
+            }
+
+            .tags {
+                padding-left: 0;
+            }
+        }
+    }
 }

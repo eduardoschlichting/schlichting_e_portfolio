@@ -1,14 +1,24 @@
 export default {
     name: "TheThumbnailComponent",
+    props: ["piece"],
 
     template: `
-    <div class="project-box" @click="showBox = true">
+    <div class="project-box" @click="showmydata" :style="{ backgroundImage: 'url(images/' + piece.Image4 + ')'}">
 
               <div class="project-box__content">
-                <h3 class="project-heading">Project 1</h3>
-                <h4>year</h4>
+                <h3 class="project-heading">{{piece.Title}}</h3>
+                <h4>{{piece.Date}}</h4>
+
+                <h4>{{piece.Tags}}</h4>
               </div>
 
           </div>
-    `
+    `,
+
+    methods: {
+      showmydata() {
+            
+      this.$emit("showdata", this.piece);
+    }
+  }
 }

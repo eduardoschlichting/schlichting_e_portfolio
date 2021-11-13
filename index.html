@@ -35,6 +35,8 @@
             <div class="menu-btn" v-on:click="menu">
               <span class="menu-btn__burger"></span>
             </div>
+
+            
           </header>
         
             <nav class="nav">
@@ -47,7 +49,7 @@
                 </li>
                 
                 <li class="menu-nav__item">
-                  <a class="menu-nav__link">
+                  <a href="about.html" class="menu-nav__link">
                     About me.
                   </a>
                 </li>
@@ -74,7 +76,7 @@
             <div class="home-header">
               <div class="home-content">
                 <h3>Hello There!</h3>
-                <h2>I'm Eduardo, but you can call me Ed :D</h2>
+                <h2 class="gradient-text">I'm Eduardo, but you can call me <span>Ed</span> :D</h2>
                 <p>I’m a designer and front-end web developer based in London, Ontario. I like to create cool, beautiful and functional stuff for the internet.</p>
               </div>
               
@@ -122,16 +124,14 @@
         <section class="projects">
 
           <div class="project-titles">
-            <h2>My Work</h2>
+            <h2 class="gradient-text">My Work</h2>
             <h3>Featured Projects</h3>
           </div>
 
           <div class="project-box__wrapper">
 
-            <thumb></thumb>
-            <thumb ></thumb>
-            <thumb></thumb>
-            <thumb></thumb>
+            <thumb v-on:showdata="showLightBox" v-for="item in portfolioData" :piece="item" key="main_item"></thumb>
+            
             
         </section>
 
@@ -139,33 +139,25 @@
         <section class="other-projects">
           
           <div class="other-titles">
-            <h2>Other Projects</h2>
+            <h2 class="gradient-text">Other Projects</h2>
             <h3>Noteworthy projects</h3>
           </div>
 
           <div class="other-box__wrapper">
 
-             <otherthumb></otherthumb>
-             <otherthumb></otherthumb>
-             <otherthumb></otherthumb>
-             <otherthumb></otherthumb>
+             <otherthumb v-for="item in itemsNoted"></otherthumb>
+             
 
         </section>
         
-        <section class="lightbox">
 
-          <lightbox v-if="showBox"></lightbox>
-          <!-- <div class="lightbox-wrapper">
-            <div class="close-btn">
-              <span class="close-btn__x"></span>
-            </div>
-          </div> -->
-        </section>
+        <lightbox :class="{visible: showBox}" :item="currentPortfolioData" v-on:close="closeLightBox"></lightbox>
+         
 
 
         <section class="skills">
 
-          <div class="skills-title">
+          <div class="skills-title gradient-text">
             <h2>Some stuff I know how to do</h2>
           </div>
           
@@ -202,7 +194,7 @@
 
         <section class="contact-cta">
           <div class="contact-wrapper">
-            <h2>Let's Work together!</h2>
+            <h2 class="gradient-text">Let's Work together!</h2>
             <p>You have an amazing (or crazy) idea for your next web project? Let’s build something awesome!</p>
             <P>Simply send me an message with your inquire. I promise to respond asap!</p>
             <button>contact me</button>
@@ -223,3 +215,4 @@
     <script type="module" src="js/main.js" defer></script>
 </body>
 </html>
+
