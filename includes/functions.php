@@ -5,7 +5,19 @@
     function getPortfolioData($conn, $projects) {
         
         if (is_null($projects)) {
-            $query = "SELECT * FROM tbl_projects";
+            $query = "SELECT
+            p.*,
+            GROUP_CONCAT(t.Tag SEPARATOR ' ') AS Tags,
+            n.Noteworthy AS Note
+        FROM
+            tbl_projects AS p,
+            tbl_tags AS t,
+            tbl_noteworthy AS n,
+            tbl_projects_tags AS p_t
+        WHERE
+            p.ID = p_t.Project_ID AND t.ID = p_t.Tag_ID AND n.ID = p_t.Note_ID
+        GROUP BY
+            p.ID";
         } else {
             $query = "SELECT * FROM tbl_projects WHERE id='".$projects."'";
         };
