@@ -1,11 +1,13 @@
 
+
 .about, .journey, .moves {
   margin: 0 auto;
-    margin-bottom: 4em;
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
 
 h2, p {
@@ -13,9 +15,21 @@ h2, p {
 }
 }
 
+.about {
+    position: relative;
+
+    .scroll-down {
+        position: absolute;
+
+        bottom: 2em;
+    }
+}
+
+
+
 .about-content {
     width: 80%;
-    margin-top: 8em;
+    
 }
 
 .journey-content, .moves-content {
