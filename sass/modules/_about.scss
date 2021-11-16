@@ -1,0 +1,36 @@
+
+.about, .journey, .moves {
+  margin: 0 auto;
+    margin-bottom: 4em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+h2, p {
+    padding-bottom: .8em;
+}
+}
+
+.about-content {
+    width: 80%;
+    margin-top: 8em;
+}
+
+.journey-content, .moves-content {
+    width: 80%;
+}
+
+.moves-content {
+    .moves-words {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        place-items: center;
+        gap: 2em;
+    }
+}
+
+
+

@@ -33,12 +33,10 @@
     }
 
     .scroll-down {
-      // scroll down
       position: absolute;
-      bottom: 10px;
+      bottom: 2em;
       align-self: center;
       text-align: center;
-      margin-top: 30px;
 
       h4 {
         margin-bottom: 0.5em;
@@ -55,7 +53,7 @@
 }
 .text-fixed {
   position: fixed;
-  bottom: 0;
+  bottom: -8em;
   left: 4%;
 
   display: flex;
@@ -86,7 +84,7 @@
 }
 .links-fixed {
   position: fixed;
-  bottom: 0;
+  bottom: -8em;
   left: 92%;
 
   display: flex;

@@ -15,9 +15,11 @@ export default {
             <h3>{{item.Date}}</h3>
             
             <div class="tags">
-            <p>Tag 1</p>
-            <p>Tag 2</p>
+            <p>{{item.Tags}}</p>
             </div>
+            
+            <a ><h3></h3></a>
+            <a ><h3></h3></a>
             
             <a :href='item.Behance'><h3>See the Project on Behance</h3></a>
             <p class="desc_1">{{item.Desc1}}</p>
