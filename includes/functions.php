@@ -7,7 +7,7 @@
         if (is_null($projects)) {
             $query = "SELECT
             p.*,
-            GROUP_CONCAT(t.Tag SEPARATOR ' ') AS Tags,
+            GROUP_CONCAT(t.Tag SEPARATOR ' // ') AS Tags,
             n.Noteworthy AS Note
         FROM
             tbl_projects AS p,

@@ -16,8 +16,8 @@ import TheLightbox from "./components/lightbox.js";
             this.portfolioData = data.filter(item => item.Note === "false");
             this.noteworthyData = data.filter(item => item.Note === "true");
             
-            this.portfolioData.forEach(item => item.Tags = item.Tags.split(" "));
-            this.noteworthyData.forEach(item => item.Tags = item.Tags.split(" "));
+            // this.portfolioData.forEach(item => item.Tags = item.Tags.split(" "));
+            // this.noteworthyData.forEach(item => item.Tags = item.Tags.split(" "));
             // do the same for the images 
             // this.portfolioData.forEach(img => img.imgs = img.imgs.split(" "));
         }); 
