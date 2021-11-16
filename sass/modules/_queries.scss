@@ -132,6 +132,7 @@
     }
   }
 
+
   .projects,
   .other-projects,
   .skills,
@@ -249,4 +250,27 @@
       max-width: 70%;
     }
   }
+}
+
+// About page 
+
+@media screen and (min-width: 960px) {
+  .home-header {
+    
+    .about-content {
+      width: 80%;
+
+        h3 {
+          width: fit-content;
+        }
+        h2 {
+            width: 80%;
+        }
+        p {
+            padding-bottom: 1em;
+            padding-right: 0;
+            width: 80%;
+        }
+    }
+}
 }

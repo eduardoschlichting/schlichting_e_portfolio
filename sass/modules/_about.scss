@@ -1,0 +1,59 @@
+
+
+
+
+.about, .journey, .moves {
+  margin: 0 auto;
+    margin-bottom: 4em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+//   text-align: center;
+
+h2, p {
+    padding-bottom: .8em;
+}
+}
+
+.about-content {
+    width: 80%;
+    margin-top: 8em;
+}
+
+.journey-content, .moves-content {
+    width: 80%;
+}
+
+.moves-content {
+    .moves-words {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        gap: 2em;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .moves-content {
+        .moves-words {
+            
+            grid-template-columns: 1fr 1fr 1fr;
+            
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .about-content {
+        margin-top: 18em;
+    };
+
+    .about-content, .journey-content, .moves-content {
+        width: 50%;
+        h2, p {
+            width: 85%;
+        }
+    }
+}

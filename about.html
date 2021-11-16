@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+
+    <title>Eduardo Schlichting - Front-end Web Developer</title>
+  </head>
+  <body>
+
+    <main>
+      <h1 class="hidden">Dui - Front-end Web Developer</h1>
+
+      <header class="nav-wrapper">
+        <h1 class="hidden">Header - Nav</h1>
+
+        <div class="logo-dui-nav">
+          <a href="index.html">
+            <img src="dist/logo_dui_d.svg" id="imgLogo" alt="Logo Dui" />
+          </a>
+        </div>
+
+        <div class="menu-btn" v-on:click="menu">
+          <span class="menu-btn__burger"></span>
+        </div>
+      </header>
+
+      <nav class="nav">
+        <h2 class="hidden">Nav - mobile</h2>
+        <ul class="menu-nav">
+          <li class="menu-nav__item">
+            <a href="index.html" class="menu-nav__link"> Work. </a>
+          </li>
+
+          <li class="menu-nav__item">
+            <a href="about.html" class="menu-nav__link"> About me. </a>
+          </li>
+
+          <li class="menu-nav__item">
+            <a href="contact.html" class="menu-nav__link"> Contact me. </a>
+          </li>
+
+          <li class="menu-nav__item">
+            <div>
+              <img src="dist/logo-footer-purple-m.svg" alt="Logo footer" />
+              <p>Made with <span><3</span> by Eduardo Schlichting - 2021</p>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="about">
+        <div class="about-content">
+          <h3>I'm glad you are here!</h3>
+          <h2 class="gradient-text">
+            I’m a Brazilian dude who decided to live in Canada
+          </h2>
+          <p>
+            I have a passion for design and everything creative. Anything that involves drawing, sketching, or building, I would do.
+
+          </p>
+          <p>
+            
+Creating stuff was always part of my life. I started building brands for my friends and immediately fell in love with the design world. Then, I decided to dive into the coding world, and here I am.
+          </p>
+        </div>
+      </section>
+
+      <section class="links-fixed">
+        <div class="links">
+          <a><img src="dist/linkedin-logo.svg" alt="Linkedin Link" /></a>
+          <a><img src="dist/behance-logo.svg" alt="Behance Link" /></a>
+          <a><img src="dist/github-link.svg" alt="Github Link" /></a>
+        </div>
+
+        <img class="line" src="dist/line.svg" alt="line" />
+      </section>
+
+      <section class="text-fixed">
+        <div class="link">
+          <p>Design.</p>
+          <p>Motion.</p>
+          <p>Front-end.</p>
+        </div>
+
+        <img class="line" src="dist/line.svg" alt="line" />
+      </section>
+
+      <section class="journey">
+        <div class="journey-content">
+          <h2 class="gradient-text">My journey to coding and the Web</h2>
+          <p>
+            I’ve been a Graphic Designer for more than 3 years. Last year I moved to Canada to start a brand new life, and why not include another graduation in the package as well, right?
+          </p>
+          <p>
+            Since then I’ve been learning Web Development, improving my skills in design and UX/UI, and creating some cool stuff for the internet :D
+          </p>
+        </div>
+      </section>
+
+      <section class="moves">
+        <div class="moves-content">
+          <h2 class="gradient-text">What moves me everyday:</h2>
+
+          <div class="moves-words">
+            <h3>Creating</h3>
+            <h3>Designing</h3>
+            <h3>Coding</h3>
+            <h3>Food (of course!)</h3>
+            <h3>Working out</h3>
+            <h3>Reading</h3>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-cta">
+        <div class="contact-wrapper">
+          <h2 class="gradient-text">Let's Work together!</h2>
+          <p>
+            You have an amazing (or crazy) idea for your next web project? Let’s
+            build something awesome!
+          </p>
+          <p>
+            Simply send me an message with your inquire. I promise to respond
+            asap!
+          </p>
+          <button>contact me</button>
+        </div>
+      </section>
+
+      <footer>
+        <div>
+          <img src="dist/logo-footer-purple-m.svg" alt="Logo footer" />
+          <p>Made with <span><3</span> by Eduardo Schlichting - 2021</p>
+        </div>
+      </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script type="module" src="js/pages.js" defer></script>
+    <script type="module" src="js/main.js" defer></script>
+  </body>
+</html>

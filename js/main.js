@@ -5,24 +5,34 @@ import TheOtherThumbnail from "./components/otherThumbnail.js";
 import TheLightbox from "./components/lightbox.js";
 
 (() => {
-//   const menuBtn = document.querySelector(".menu-btn");
 
-//   menuBtn.addEventListener("click", toggleMenu); 
+
+
 
   const myVue = new Vue({
     created: function() {
         // go fetch the portfolio data here
-        getData(null, (data) => this.portfolioData = data ); 
-            // get the bullk data and filter or splice - find the righ tmethod
-            // this.noteworthyData = data.filter()
-            // this.portfolioData = data.filter()
-    
+        getData(null, (data) => {
+            this.portfolioData = data.filter(item => item.Note === "false");
+            this.noteworthyData = data.filter(item => item.Note === "true");
+            
+            this.portfolioData.forEach(item => item.Tags = item.Tags.split(" "));
+            this.noteworthyData.forEach(item => item.Tags = item.Tags.split(" "));
+            // do the same for the images 
+            // this.portfolioData.forEach(img => img.imgs = img.imgs.split(" "));
+        }); 
+            // get the bullk data and filter or splice - find the right method
+            // .filter = based in a condition 
+
+            // use for the images to filter the data
+            //let tags = tada.map(item => item.Tags.split(" "));
         
     },
 
     data: {
         // this is storing the database info from our fetch call
         portfolioData: [],
+        noteworthyData: [],
         message: "hello from Vue",
        
         showBox: false,
@@ -48,18 +58,11 @@ import TheLightbox from "./components/lightbox.js";
         'thumb': TheThumbnail,
         'otherthumb': TheOtherThumbnail,
         'lightbox': TheLightbox
-        },
-
-        computed: {
-            // https://vuejs.org/v2/guide/computed.html
-            // https://v3.vuejs.org/guide/list.html#displaying-filtered-sorted-results
-            // filter the portfolioData array with a conditional
-            // if note === "true", return the array
-            //this = vue instance
-            // itemsNoted: function() {
-            //     return this.portfolioData.filter((item) => { return item.note === "true"})
-                
-            // }
-          } 
+        }
     }).$mount("#app");
+
 })();
+
+// build a new js file for the menu
+// import the menu and just add an event listener there 
+// const menuBtn = document.querySelector(".menu-btn");

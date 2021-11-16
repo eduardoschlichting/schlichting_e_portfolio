@@ -14,9 +14,8 @@ export default {
             <h2 class="title">{{item.Title}}</h2>
             <h3>{{item.Date}}</h3>
             
-            <div class="tags">
-            <p>Tag 1</p>
-            <p>Tag 2</p>
+            <div class="tags" v-for="tag in item.Tags">
+            <p>{{tag}}</p>
             </div>
             
             <a :href='item.Behance'><h3>See the Project on Behance</h3></a>
