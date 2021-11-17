@@ -61,47 +61,63 @@
       <section class="contact">
         <div class="contact-content">
           <h3>Like what you've seen fo far?</h3>
-          <h2 class="gradient-text">
-            Let's work together then!
-          </h2>
-          <p>
-            I promise to get back to you as soon as I can :D
-          </p>  
-
+          <h2 class="gradient-text">Let's work together then!</h2>
+          <p>I promise to get back to you as soon as I can :D</p>
         </div>
 
-            <div class="form-cont">
-				
-				<form action="">
-                    
-                    <label class="form-group">
-                    <input type="text" class="form-control" required>
-                    <span>Your Name</span>
-                    <span class="border"></span>
-                    </label>
+        <div class="form-cont">
+          <form action="./includes/mail/send.php" method="POST" id="mail-form">
+            <!-- "for" associate label with the input (same as id)-->
+            <label class="form-group">
+              <input
+                type="text"
+                id="firstname"
+                class="form-control"
+                name="firstname"
+                required
+              />
+              <span for="firstname">Your First Name</span>
+              <span class="border"></span>
+            </label>
 
-                    <label class="form-group">
-                    <input type="text" class="form-control" required>
-                    <span for="email">Your Mail</span>
-                    <span class="border"></span>
-                    </label>
+            <label class="form-group">
+              <input
+                type="text"
+                id="lastname"
+                class="form-control"
+                name="lastname"
+                required
+              />
+              <span for="lastname">Your Last Name</span>
+              <span class="border"></span>
+            </label>
 
-                    <label class="form-group">
-                    <textarea name="message" class="form-control" required></textarea>
-                    <span for="message">Your Message</span>
-                    <span class="border"></span>
-                    </label>
+            <label class="form-group">
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                name="email"
+                required
+              />
+              <span for="email">Your Email</span>
+              <span class="border"></span>
+            </label>
 
-                    <button>Submit
-                    <i class="zmdi zmdi-arrow-right"></i>
-                    </button>
-
-                    </form>
-			</div>
-
-		</section>
+            <label class="form-group">
+              <textarea
+                name="message"
+                id="message"
+                class="form-control-area"
+                cols="30"
+                rows="10"
+              ></textarea>
+              <span for="message">Your Message</span>
+              <span class="border"></span>
+            </label>
+            <button class="submit-wrapper">Submit</button>
+          </form>
         </div>
-
       </section>
 
       <section class="links-fixed">
@@ -134,6 +150,7 @@
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
     <script type="module" src="js/pages.js" defer></script>
+
     <script type="module" src="js/main.js" defer></script>
   </body>
 </html>
