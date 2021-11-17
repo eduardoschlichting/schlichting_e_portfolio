@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+
+    <title>Eduardo Schlichting - Front-end Web Developer</title>
+  </head>
+  <body>
+    <main>
+      <h1 class="hidden">Dui - Front-end Web Developer</h1>
+
+      <header class="nav-wrapper">
+        <h1 class="hidden">Header - Nav</h1>
+
+        <div class="logo-dui-nav">
+          <a href="index.html">
+            <img src="dist/logo_dui_d.svg" id="imgLogo" alt="Logo Dui" />
+          </a>
+        </div>
+
+        <div class="menu-btn" v-on:click="menu">
+          <span class="menu-btn__burger"></span>
+        </div>
+      </header>
+
+      <nav class="nav">
+        <h2 class="hidden">Nav - mobile</h2>
+        <ul class="menu-nav">
+          <li class="menu-nav__item">
+            <a href="index.html" class="menu-nav__link"> Work. </a>
+          </li>
+
+          <li class="menu-nav__item">
+            <a href="about.html" class="menu-nav__link"> About me. </a>
+          </li>
+
+          <li class="menu-nav__item">
+            <a href="contact.html" class="menu-nav__link"> Contact me. </a>
+          </li>
+
+          <li class="menu-nav__item">
+            <div>
+              <img src="dist/logo-footer-purple-m.svg" alt="Logo footer" />
+              <p>Made with <span><3</span> by Eduardo Schlichting - 2021</p>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="contact">
+        <div class="contact-content">
+          <h3>Like what you've seen fo far?</h3>
+          <h2 class="gradient-text">
+            Let's work together then!
+          </h2>
+          <p>
+            I promise to get back to you as soon as I can :D
+          </p>  
+
+        </div>
+
+            <div class="form-cont">
+				
+				<form action="">
+                    
+                    <label class="form-group">
+                    <input type="text" class="form-control" required>
+                    <span>Your Name</span>
+                    <span class="border"></span>
+                    </label>
+
+                    <label class="form-group">
+                    <input type="text" class="form-control" required>
+                    <span for="email">Your Mail</span>
+                    <span class="border"></span>
+                    </label>
+
+                    <label class="form-group">
+                    <textarea name="message" class="form-control" required></textarea>
+                    <span for="message">Your Message</span>
+                    <span class="border"></span>
+                    </label>
+
+                    <button>Submit
+                    <i class="zmdi zmdi-arrow-right"></i>
+                    </button>
+
+                    </form>
+			</div>
+
+		</section>
+        </div>
+
+      </section>
+
+      <section class="links-fixed">
+        <div class="links">
+          <a><img src="dist/linkedin-logo.svg" alt="Linkedin Link" /></a>
+          <a><img src="dist/behance-logo.svg" alt="Behance Link" /></a>
+          <a><img src="dist/github-link.svg" alt="Github Link" /></a>
+        </div>
+
+        <img class="line" src="dist/line.svg" alt="line" />
+      </section>
+
+      <section class="text-fixed">
+        <div class="link">
+          <p>Design.</p>
+          <p>Motion.</p>
+          <p>Front-end.</p>
+        </div>
+
+        <img class="line" src="dist/line.svg" alt="line" />
+      </section>
+
+      <footer>
+        <div>
+          <img src="dist/logo-footer-purple-m.svg" alt="Logo footer" />
+          <p>Made with <span><3</span> by Eduardo Schlichting - 2021</p>
+        </div>
+      </footer>
+    </main>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
+    <script type="module" src="js/pages.js" defer></script>
+    <script type="module" src="js/main.js" defer></script>
+  </body>
+</html>
