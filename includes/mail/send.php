@@ -45,11 +45,11 @@ $email_recipient = 'schlichting.eduardo@gmail.com'; // Your email, or AKA "To" e
 $email_message = sprintf('Name: %s, Email: %s, Message: %s', $visitor_name, $visitor_email, $visitor_message);
 $email_headers = array(
     // best practice, but it may need you to have a mail set up in noreply@yourdomain.ca
-    // 'From'=>'schlichting.eduardo@gmail.com',
-    // 'Reply-To'=>$visitor_email
+    'From'=>'schlichting.eduardo@gmail.com',
+    'Reply-To'=>$visitor_email
 
     // OR use this, if hosting doesnt support it
-    'From'=>$visitor_email
+    // 'From'=>$visitor_email
 );
 
 // 3. Send out the email
@@ -57,9 +57,9 @@ $email_headers = array(
 
 $email_result = mail($email_recipient, $email_subject, $email_message, $email_headers);
 if($email_result){
-    $results['message'] = sprintf('Thank you for contacting us, %s. You will get a reply within 24 hours.', $visitor_name);
+    $results['message'] = sprintf('Thank you for contacting me, %s. I will get back to you as soon as I can :D', $visitor_name);
 } else {
-    $results['message'] = sprintf('We are sorry, but the email did not go through.');
+    $results['message'] = sprintf('I am sorry, but your email could not be sent.');
 }
 
 echo json_encode($results);

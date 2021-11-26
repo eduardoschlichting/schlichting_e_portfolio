@@ -13,7 +13,7 @@
 
     <title>Eduardo Schlichting - Front-end Web Developer</title>
 </head>
-<body>
+<body >
     
     <main id="app">
         <h1 class="hidden">Dui - Front-end Web Developer</h1>
@@ -130,13 +130,13 @@
 
           <div class="project-box__wrapper">
 
-            <thumb v-on:showdata="showLightBox" v-for="item in portfolioData" :piece="item" key="main_item"></thumb>
+            <thumb v-on:showdata="showLightBox" v-for="item in portfolioData" :piece="item" :key="item.ID"></thumb>
             
             
         </section>
 
-
-        <section class="other-projects">
+        <!-- Gonna use this next semester -->
+        <!-- <section class="other-projects">
           
           <div class="other-titles">
             <h2 class="gradient-text">Other Projects</h2>
@@ -146,7 +146,7 @@
           <div class="other-box__wrapper">
 
              <otherthumb></otherthumb>
-             
+              -->
 
         </section>
         
