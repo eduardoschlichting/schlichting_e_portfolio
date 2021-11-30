@@ -14,8 +14,32 @@ h2, p {
     padding-bottom: .8em;
 }
 }
+.about {
+    h3 {
+        animation: slide-up 1.2s ease-out forwards, opacity 1.4s ease-out forwards;
+    }
+    h2 {
+        animation: slide-up 1.4s ease-out forwards, opacity 1.8s ease-out forwards;
+    }
+    p {
+        animation: slide-up 1.8s ease-out forwards, opacity 2s ease-out forwards;
+    }
+}
+
+.scroll-down {
+
+    animation: slide-up 1.2s ease-out forwards;
+
+    h4 {
+      animation: opacity 2s ease-out forwards;
+    }
+    img {
+      animation: upanddown 1.5s ease-out infinite, opacity 2s ease-out forwards;
+    }
+  }
+
 .journey, .moves {
-    height: 70vh;
+    height: 60vh;
 }
 
 .about {

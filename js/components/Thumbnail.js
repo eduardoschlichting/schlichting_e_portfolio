@@ -3,7 +3,7 @@ export default {
     props: ["piece"],
 
     template: `
-    <div class="project-box" @click="showmydata" :style="{ backgroundImage: 'url(images/' + piece.Image1 + ')'}">
+    <div class="project-box" @click="showmydata" :style="{ backgroundImage: 'url(dist/' + piece.Image1 + ')'}" >
 
               <div class="project-box__content">
                 <h3 class="project-heading">{{piece.Title}}</h3>

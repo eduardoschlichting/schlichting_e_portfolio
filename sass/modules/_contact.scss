@@ -14,6 +14,16 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+
+  h3 {
+    animation: slide-up 1.2s ease-out forwards, opacity 1.4s ease-out forwards;
+}
+h2 {
+    animation: slide-up 1.4s ease-out forwards, opacity 1.8s ease-out forwards;
+}
+p {
+    animation: slide-up 1.8s ease-out forwards, opacity 2s ease-out forwards;
+}
 }
 
 .form-cont {
@@ -21,6 +31,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 1em;
+  animation: slide-up 2.3s ease-out forwards, opacity 2.6s ease-out forwards;
 }
 
 @media screen and (min-width: 960px) {

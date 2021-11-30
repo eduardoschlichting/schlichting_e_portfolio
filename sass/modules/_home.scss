@@ -1,3 +1,5 @@
+@import "modules/animations";
+
 .home-wrapper {
   height: 100vh;
   display: flex;
@@ -11,10 +13,6 @@
     flex-direction: column;
     justify-content: center;
     position: relative;
-
-    h2 {
-      width: 100%;
-    }
   
     .home-header {
       display: flex;
@@ -25,11 +23,36 @@
         display: flex;
         flex-direction: column;
         justify-content: left;
+
+        // animating
+
+        h3 {
+          animation: slide-up 1.2s ease-out forwards, opacity 1.4s ease-out forwards;
+        }
+
+        h2 {
+          animation: slide-up 1.5s ease-out forwards, opacity 2s ease-out forwards;
+        }
+        p {
+          animation: slide-up 2.2s ease-out forwards, opacity 2.6s ease-out forwards;
+        }
       }
     }
 
+    // //helper classes for after loader animation trigger
+    // .slide-up-h3-home {
+    //   animation: slide-up 1.2s ease-out forwards, opacity 1.4s ease-out forwards;
+    // }
+    // .slide-up-h2-home {
+    //   animation: slide-up 1.5s ease-out forwards, opacity 2s ease-out forwards;
+    // }
+    // .slide-up-p-home {
+    //   animation: slide-up 2.2s ease-out forwards, opacity 2.6s ease-out forwards;
+    // }
+
     .avatar {
       margin: 0 auto;
+      animation: slide-up 1.5s ease-out forwards, opacity 2s ease-out forwards;
     }
 
     .scroll-down {
@@ -37,12 +60,15 @@
       bottom: 2em;
       align-self: center;
       text-align: center;
+      animation: slide-up 1.2s ease-out forwards;
 
       h4 {
+        animation: opacity 2s ease-out forwards;
         margin-bottom: 0.5em;
       }
       img {
         width: 33.24px;
+        animation: upanddown 1.5s ease-out infinite, opacity 2s ease-out forwards;
       }
     }
   }
@@ -60,6 +86,7 @@
   flex-direction: column;
   align-items: center;
   gap: 3.5em;
+  animation: slide-up 1.2s ease-out forwards, opacity 1.4s ease-out forwards;
 
   .link {
     // margin: 0 auto;
@@ -67,6 +94,7 @@
     flex-direction: column;
     align-items: center;
     gap: 5em;
+    animation: slide-up 1.2s ease-out forwards, opacity 1.4s ease-out forwards;
     
     p {
       transform: rotate(-90deg);
@@ -91,13 +119,17 @@
   flex-direction: column;
   align-items: center;
   gap: 1.5em;
-
+  .line {
+    animation: slide-up 1.5s ease-out forwards, opacity 1.4s ease-out forwards;
+  }
   .links {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2.5em;
+    animation: slide-up 1.2s ease-out forwards, opacity 1.4s ease-out forwards;
 
+    
     a {
       margin: 0 auto;
       width: 65%;
@@ -105,6 +137,8 @@
       img {
         width: 100%;
         @include transition-ease;
+        animation: slide-up 1.2s ease-out forwards, opacity 1.4s ease-out forwards;
+        
 
         &:hover {
           scale: 1.2;
@@ -175,7 +209,7 @@
     display: flex;
     // flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: 2em;
     margin-top: 2em;
@@ -209,6 +243,8 @@
       width: 100%;
     }
   }
+
+  
 }
 
 footer {

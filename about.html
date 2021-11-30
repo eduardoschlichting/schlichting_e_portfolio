@@ -5,34 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- favicon stuff -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <link rel="stylesheet" href="css/main.css" />
 
     <title>Eduardo Schlichting - Front-end Web Developer</title>
   </head>
   <body>
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
     <main>
       <h1 class="hidden">Dui - Front-end Web Developer</h1>
 
-      <header class="nav-wrapper">
+      <header class="nav-header">
         <h1 class="hidden">Header - Nav</h1>
+        <div class="nav-wrapper">
+          <div class="logo-dui-nav">
+              <a href="index.html">
+              <img src="dist/logo_dui_d.svg" id="imgLogo" alt="Logo Dui">
+              </a>
+          </div>
 
-        <div class="logo-dui-nav">
-          <a href="index.html">
-            <img src="dist/logo_dui_d.svg" id="imgLogo" alt="Logo Dui" />
-          </a>
+          <div class="menu-btn" v-on:click="menu">
+            <span class="menu-btn__burger"></span>
+          </div>
+          
         </div>
-
-        <div class="menu-btn" v-on:click="menu">
-          <span class="menu-btn__burger"></span>
-        </div>
-      </header>
+          
+        </header>
 
       <nav class="nav">
         <h2 class="hidden">Nav - mobile</h2>
@@ -83,9 +98,9 @@
 
       <section class="links-fixed">
         <div class="links">
-          <a><img src="dist/linkedin-logo.svg" alt="Linkedin Link" /></a>
-          <a><img src="dist/behance-logo.svg" alt="Behance Link" /></a>
-          <a><img src="dist/github-link.svg" alt="Github Link" /></a>
+          <a href="https://www.linkedin.com/in/eduardoschlichting/" target="_blank"><img src="dist/linkedin-logo.svg" alt="Linkedin Link"></a>
+          <a href="https://www.behance.net/eduardoschlichting" target="_blank"><img src="dist/behance-logo.svg" alt="Behance Link"></a>
+          <a href="https://github.com/eduardoschlichting/" target="_blank"><img src="dist/github-link.svg" alt="Github Link"></a>
         </div>
 
         <img class="line" src="dist/line.svg" alt="line" />
@@ -103,13 +118,31 @@
 
       <section class="journey">
         <div class="journey-content">
-          <h2 class="gradient-text">My journey to coding and the Web</h2>
-          <p>
+          <h2
+            class="gradient-text"
+            class="gradient-text"
+            data-aos="fade-up"
+            data-aos-easing="ease-out"
+            data-aos-duration="1200"
+          >
+            My journey to coding and the Web
+          </h2>
+          <p
+            data-aos="fade-up"
+            data-aos-easing="ease-out"
+            data-aos-duration="1200"
+            data-aos-delay="100"
+          >
             I’ve been a Graphic Designer for more than 3 years. Last year I
             moved to Canada to start a brand new life, and why not include
             another graduation in the package as well, right?
           </p>
-          <p>
+          <p
+            data-aos="fade-up"
+            data-aos-easing="ease-out"
+            data-aos-duration="1200"
+            data-aos-delay="200"
+          >
             Since then I’ve been learning Web Development, improving my skills
             in design and UX/UI, and creating some cool stuff for the internet
             :D
@@ -119,31 +152,108 @@
 
       <section class="moves">
         <div class="moves-content">
-          <h2 class="gradient-text">What moves me everyday:</h2>
+          <h2
+            class="gradient-text"
+            data-aos="fade-up"
+            data-aos-easing="ease-out"
+            data-aos-duration="1200"
+          >
+            What moves me everyday:
+          </h2>
 
           <div class="moves-words">
-            <h3>Coding</h3>
-            <h3>Designing</h3>
-            <h3>Travelling</h3>
-            <h3>Food (of course!)</h3>
-            <h3>Working out</h3>
-            <h3>Reading</h3>
+            <h3
+              data-aos="fade-up"
+              data-aos-easing="ease-out"
+              data-aos-duration="1200"
+              data-aos-delay="100"
+            >
+              Coding
+            </h3>
+            <h3
+              data-aos="fade-up"
+              data-aos-easing="ease-out"
+              data-aos-duration="1200"
+              data-aos-delay="150"
+            >
+              Designing
+            </h3>
+            <h3
+              data-aos="fade-up"
+              data-aos-easing="ease-out"
+              data-aos-duration="1200"
+              data-aos-delay="200"
+            >
+              Travelling
+            </h3>
+            <h3
+              data-aos="fade-up"
+              data-aos-easing="ease-out"
+              data-aos-duration="1200"
+              data-aos-delay="250"
+            >
+              Food (of course!)
+            </h3>
+            <h3
+              data-aos="fade-up"
+              data-aos-easing="ease-out"
+              data-aos-duration="1200"
+              data-aos-delay="300"
+            >
+              Working out
+            </h3>
+            <h3
+              data-aos="fade-up"
+              data-aos-easing="ease-out"
+              data-aos-duration="1200"
+              data-aos-delay="350"
+            >
+              Reading
+            </h3>
           </div>
         </div>
       </section>
 
       <section class="contact-cta">
         <div class="contact-wrapper">
-          <h2 class="gradient-text">Let's Work together!</h2>
-          <p>
+          <h2
+            class="gradient-text"
+            class="gradient-text"
+            class="gradient-text"
+            data-aos="fade-up"
+            data-aos-easing="ease-out"
+            data-aos-duration="1200"
+          >
+            Let's Work together!
+          </h2>
+          <p
+            data-aos="fade-up"
+            data-aos-easing="ease-out"
+            data-aos-duration="1200"
+            data-aos-delay="100"
+          >
             You have an amazing (or crazy) idea for your next web project? Let’s
             build something awesome!
           </p>
-          <p>
+          <p
+            data-aos="fade-up"
+            data-aos-easing="ease-out"
+            data-aos-duration="1200"
+            data-aos-delay="200"
+          >
             Simply send me an message with your inquire. I promise to respond
             asap!
           </p>
-          <button>contact me</button>
+          <a href="contact.html">
+          <button
+            data-aos="fade-up"
+            data-aos-easing="ease-out"
+            data-aos-duration="1200"
+            data-aos-delay="300"
+          >
+            contact me
+          </button>
+        </a>
         </div>
       </section>
 
@@ -155,8 +265,13 @@
       </footer>
     </main>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script type="module" src="js/pages.js" defer></script>
-    <script type="module" src="js/main.js" defer></script>
+    <script type="module" src="js/cursor.js" defer></script>
+    <!-- <script type="module" src="js/main.js" defer></script> -->
   </body>
 </html>
