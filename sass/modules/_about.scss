@@ -1,21 +1,62 @@
 
+
 .about, .journey, .moves {
   margin: 0 auto;
-    margin-bottom: 4em;
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
 
 h2, p {
     padding-bottom: .8em;
 }
 }
+.about {
+    h3 {
+        animation: slide-up 1.2s ease-out forwards, opacity 1.4s ease-out forwards;
+    }
+    h2 {
+        animation: slide-up 1.4s ease-out forwards, opacity 1.8s ease-out forwards;
+    }
+    p {
+        animation: slide-up 1.8s ease-out forwards, opacity 2s ease-out forwards;
+    }
+}
+
+.scroll-down {
+
+    animation: slide-up 1.2s ease-out forwards;
+
+    h4 {
+      animation: opacity 2s ease-out forwards;
+    }
+    img {
+      animation: upanddown 1.5s ease-out infinite, opacity 2s ease-out forwards;
+    }
+  }
+
+.journey, .moves {
+    height: 60vh;
+}
+
+.about {
+    position: relative;
+
+    .scroll-down {
+        position: absolute;
+
+        bottom: 2em;
+    }
+}
+
+
 
 .about-content {
     width: 80%;
-    margin-top: 8em;
+    
 }
 
 .journey-content, .moves-content {

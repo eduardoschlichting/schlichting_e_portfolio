@@ -1,7 +1,7 @@
 <?php 
     $db_dsn = array( 
         'host' => 'localhost', // this will change when you go live
-        'dbname' => 'db_portfolio', // update this with your database name
+        'dbname' => 'eduardz1_db_portfolio_live', // update this with your database name
         'charset' => 'utf8'
     );
 
@@ -9,8 +9,8 @@
 
     //This is the DB credentials
 
-    $db_user = 'root';
-    $db_pass = 'root'; // windows users leave this blank
+    $db_user = 'eduardz1_portlive';
+    $db_pass = 'Mtk7958e!'; // windows users leave this blank
 
     try{
         $pdo = new PDO($dsn, $db_user, $db_pass); // make a connection

@@ -2,7 +2,7 @@
 
 // Desktop
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
   h2 {
     font-size: 3rem;
     line-height: 4rem;
@@ -27,9 +27,60 @@
   }
 }
 
+// ====== CURSOR STUFF
+
+// cursor stuff
+
+.cursor, .cursor2 {
+  display: none;
+}
+
+@media screen and (min-width: 960px) {
+  .cursor {
+    display: block !important;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 2px solid $purple;
+    transition: all 200ms ease-out;
+    position: fixed;
+    z-index: 99999;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(calc(-50% + 15px), -50%);
+  }
+  
+  .cursor2 {
+    display: block !important;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: $blue;
+    opacity: .4;
+    position: fixed;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: width .3s, height .3s, opacity .3s;
+  }
+  .hover {
+    background-color: red;
+    opacity: 0.5;
+  }
+  
+  .cursorinnerhover {
+    width: 50px;
+    height: 50px;
+    opacity: .5;
+  }
+}
+// =========
+
 // menu btn
 
 @media screen and (min-width: 960px) {
+
   .menu-btn {
     height: 20px;
     width: 35px;
@@ -61,7 +112,6 @@
       }
     }
   }
-
 }
 // links fixed
 
@@ -69,44 +119,38 @@
   main {
     margin: 0 4em;
   }
-  .links-fixed, .text-fixed {
+  .links-fixed,
+  .text-fixed {
     display: none;
   }
-  
 }
 
 // Home intro
 
 @media screen and (min-width: 960px) {
-    
-    
-    .menu-nav {
-        flex-direction: row !important;
-        align-items: center;
-    
-        &__item {
-          .menu-nav__link {
-            padding: 0 .5em;
-            font-size: 3rem;
-          }
-        }
-      }
+  .menu-nav {
+    flex-direction: row !important;
+    align-items: center;
 
-      .nav-wrapper {
-      
-        .logo-dui-nav {
-          
-          width: 14em;
-
-      }
+    &__item {
+      .menu-nav__link {
+        padding: 0 0.5em;
+        font-size: 3rem;
       }
     }
+  }
+
+  .nav-wrapper {
+    .logo-dui-nav {
+      width: 14em;
+    }
+  }
+}
 
 @media screen and (min-width: 960px) {
-
-    .nav-wrapper {
-        width: 90%;
-    }
+  .nav-wrapper {
+    width: 90%;
+  }
 
   .home-wrapper {
     width: 91%;
@@ -125,13 +169,10 @@
         }
       }
       .avatar {
-
-          margin: 0;
-        
+        margin: 0;
       }
     }
   }
-
 
   .projects,
   .other-projects,
@@ -146,7 +187,6 @@
     width: 90%;
     margin: 0 auto;
     padding-top: 3em;
-    
 
     .project-box__wrapper {
       width: 90%;
@@ -187,7 +227,6 @@
     }
   }
   .contact-cta {
-
     .contact-wrapper {
       align-items: center;
       p {
@@ -215,7 +254,6 @@
     margin-top: 5em;
 
     div {
-      
       flex-direction: row;
       align-items: center;
 
@@ -227,7 +265,6 @@
     }
   }
 }
-
 
 @media screen and (min-width: 960px) {
   .other-projects {
@@ -245,62 +282,57 @@
   }
 }
 
-
 // ------------------------------------
-// About page 
-
-
+// About page
 
 @media screen and (min-width: 960px) {
-
   .home-header {
-    
     .about-content {
       width: 80%;
       margin-top: 12em;
 
-        h3 {
-          width: fit-content;
-        }
-        h2 {
-            width: 80%;
-        }
-        p {
-            padding-bottom: 1em;
-            padding-right: 0;
-            width: 80%;
-        }
+      h3 {
+        width: fit-content;
+      }
+      h2 {
+        width: 80%;
+      }
+      p {
+        padding-bottom: 1em;
+        padding-right: 0;
+        width: 80%;
+      }
     }
-}
+  }
 
   .moves {
     padding-top: 4em;
 
     .moves-content {
-        .moves-words {
-            
-            grid-template-columns: 1fr 1fr 1fr;
-            place-items: left;
-            
-        }
+      .moves-words {
+        grid-template-columns: 1fr 1fr 1fr;
+        place-items: left;
+      }
 
-        h2 {
-          text-align: center;
-          margin: 0 auto;
+      h2 {
+        text-align: center;
+        margin: 0 auto;
       }
     }
-}
+  }
 
-.about-content, .journey-content, .moves-content {
-  width: 50%;
-  text-align: left;
+  .about-content,
+  .journey-content,
+  .moves-content {
+    width: 50%;
+    text-align: left;
 
-  h2 {
+    h2 {
       width: 80%;
       // margin: 0 auto;
-  }
-  p {
+    }
+    p {
       text-align: left;
+    }
   }
-}
 }

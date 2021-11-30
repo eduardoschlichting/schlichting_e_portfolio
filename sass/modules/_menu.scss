@@ -1,16 +1,32 @@
 @import "modules/mixins";
 
-.nav-wrapper {
+.active {
+  transition: all .5s ease-out;
+  background: rgba($color: #070a36, $alpha: .8) !important;
+}
+.nav-header {
   position: fixed;
-  top: 2.5em;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 0;
+  left: 0;
+  height: auto;
+  padding: 1.5em;
+  margin: 0 auto;
 
   z-index: 9;
-  width: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  transition: all .5s ease-out;
+
+}
+
+.nav-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 90%;
 
   .logo-dui-nav {
     

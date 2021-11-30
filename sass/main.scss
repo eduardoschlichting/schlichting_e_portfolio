@@ -4,9 +4,11 @@
 
 @import "modules/menu";
 @import "modules/home";
+@import "modules/about";
+@import "modules/contact";
 @import "modules/thumbnails";
 @import "modules/lightbox";
-@import "modules/about";
+@import "modules/animations";
 
 @import "modules/queries";
 
@@ -14,6 +16,8 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
   -webkit-appearance: none; // safari bug
+  // cursor: none;
+  
 }
 
 body {
@@ -21,6 +25,7 @@ body {
   font-size: 16px;
   background-color: $background;
   font-family: $main-type;
+  
 
   margin: 0 auto;
   width: 100%;
@@ -28,18 +33,22 @@ body {
 
   overflow-x: hidden;
 }
- 
+
 main {
   margin: 0 38px;
 }
 
 .gradient-text {
   /* Fallback: Set a background color. */
-  background-color: rgb(121,131,255);
-  
+  background-color: rgb(121, 131, 255);
+
   /* Create the gradient. */
-  background-image: linear-gradient(45deg, rgba(121,131,255,1) 30%, rgba(72,220,254,1) 61%);
-  
+  background-image: linear-gradient(
+    45deg,
+    rgba(121, 131, 255, 1) 30%,
+    rgba(72, 220, 254, 1) 61%
+  );
+
   /* Set the background size and repeat properties. */
   background-size: 100%;
   background-repeat: repeat;
@@ -47,7 +56,36 @@ main {
   /* Use the text as a mask for the background. */
   /* This will show the gradient as a text color rather than element bg. */
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
+  -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
+}
+
+
+
+// preloader stuff
+
+.hideloader {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: $background;
+  display: grid;
+  place-items: center;
+  transition: all .5s ease-out;
+
+}
+
+.loader {
+  width: 8em;
+  animation: flickerAnimation 2s infinite;
+  
 }

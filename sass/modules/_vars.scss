@@ -63,6 +63,12 @@ button {
   color: $blue;
   font-weight: $bold;
   margin: 0 auto;
+  transition: all .8s ease-out;
+}
+
+button:hover {
+  background-color: $blue;
+  color: $purple;
 }
 
 .noScroll {
