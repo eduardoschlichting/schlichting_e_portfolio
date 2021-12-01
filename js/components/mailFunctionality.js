@@ -31,10 +31,10 @@ import { SendMail } from "./mailer.js";
             // the error handler in the catch block could actually be a generic catch-and-display function that handles EVERY error you might encounter during runtime. Might be a better strategy to pass in a flag or just a message and have the function display it in the UI
     }
 
-    grecaptcha.ready(() => {
-        grecaptcha.execute('6LfbtGsdAAAAAOF1R_yOBqEYEoQocyGafRkRNIko', { action: 'contact' }).then(token => {
-          document.querySelector('#recaptchaResponse').value = token;
-        });
-    });
+    // grecaptcha.ready(() => {
+    //     grecaptcha.execute('6LfbtGsdAAAAAOF1R_yOBqEYEoQocyGafRkRNIko', { action: 'contact' }).then(token => {
+    //       document.querySelector('#recaptchaResponse').value = token;
+    //     });
+    // });
 
     mailSubmit.addEventListener("click", processMail);
