@@ -1,6 +1,7 @@
 <?php
 
 // DEBUG ONLY, remove after
+error_reporting(E_ERROR | E_PARSE);
 ini_set('display_errors', '1');
 header('Access-Control-Allow-Origin:*');
 header('Content-Type: application/json; charset=UTF-8');
@@ -60,13 +61,13 @@ $email_title = 'Inquiry from Portfolio Site';
 $to = 'schlichting.eduardo@gmail.com';
 
 $body = "";
-$body .= "From: ".$user_name. "\r\n";
-$body .= "Email: ".$user_email. "\r\n";
+$body .= "From: ".$visitor_name. "\r\n";
+$body .= "Email: ".$visitor_email. "\r\n";
 $body .= "Message: ".$visitor_message. "\r\n";
 
 $email_headers = array(
 
-    'From'=>$user_email
+    'From'=>$visitor_email
 );
 
 // 3. Send out the email
@@ -74,10 +75,10 @@ $email_headers = array(
 if($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST)) {
     $email_result = mail($to, $email_title, $email_subject, $body, $email_headers);
     if($email_result){
-        $results['message'] = sprintf('Thank you for contacting us, %s. You will get a reply within 24 hours.', $user_name);
+        $results['message'] = sprintf('Thank you for contacting me, %s. I will get back to you as soon as I can!', $user_name);
         
     } else {
-        $results['message'] = sprintf('We are sorry, but the email did not go through.');
+        $results['message'] = sprintf('I am sorry, but the email did not go through.');
     }
 }
 
