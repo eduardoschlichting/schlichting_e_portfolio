@@ -32,8 +32,11 @@ body {
   min-height: 100vh;
 
   overflow-x: hidden;
+  background-image:#7983ff;
+background-image:  
+  radial-gradient(at 9% 64%, hsla(170,61%,73%,.2) 0, transparent 100%),  
+  radial-gradient(at 91% 40%, hsla(198,99%,67%,.2) 0, transparent 88%);
 }
-
 main {
   margin: 0 38px;
 }

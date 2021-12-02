@@ -58,7 +58,7 @@ $results['message_error'] = $message_error;
 $email_subject = 'Inquiry from Portfolio Site';
 $email_recipient = 'schlichting.eduardo@gmail.com'; //your email, or AKA, 'To' email
 $email_title = 'Inquiry from Portfolio Site';
-$to = 'schlichting.eduardo@gmail.com';
+$to = 'eduschlichting@eduardoschlichting.com';
 
 $body = "";
 $body .= "From: ".$visitor_name. "\r\n";
@@ -67,23 +67,32 @@ $body .= "Message: ".$visitor_message. "\r\n";
 
 $email_headers = array(
 
-    'From'=>$visitor_email
+    'From'=>$user_email
 );
 
 // 3. Send out the email
 // if the fields are not empty and the form was requested:
-if($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST)) {
-    $email_result = mail($to, $email_title, $email_subject, $body, $email_headers);
+// if($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST)) {
+//     $email_result = mail($to, $email_title, $email_subject, $body, $email_headers);
+//     if($email_result){
+//         $results['message'] = sprintf('Thank you for contacting me, %s. I will get back to you as soon as I can!', $user_name);
+        
+//     } else {
+//         $results['message'] = sprintf('I am sorry, but the email did not go through.');
+//     }
+// }
+
+$email_result = mail($to, $email_title, $email_subject, $body, $email_headers);
     if($email_result){
         $results['message'] = sprintf('Thank you for contacting me, %s. I will get back to you as soon as I can!', $user_name);
-        
+        echo json_encode($message => $results['message']);
     } else {
         $results['message'] = sprintf('I am sorry, but the email did not go through.');
+        echo "email failed";
     }
-}
 
 
-echo json_encode($results);
+
 
 // recaptcha stuff
 
