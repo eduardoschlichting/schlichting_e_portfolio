@@ -35,22 +35,45 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 
+
 $results['name'] = $visitor_name;
 $results['email'] = $visitor_email;
 $results['message'] = $visitor_message;
 $results['name_error'] = $name_error;
-$results['email-error'] = $email_error;
+$results['email_error'] = $email_error;
 
 
 
 // prepare the email
 $email_subject = 'Inquiry from Portfolio Site';
-$email_recipient = 'schlichting.eduardo@gmail.com';
+$email_recipient = 'duischlichting@eduardoschlichting.com';
 $email_message = sprintf('Name: %s, Email: %s, Message: %s', $visitor_name, $visitor_email, $visitor_message);
 $email_headers = array(
 
     'From' =>$visitor_email
 );
+
+
+
+//send out the email
+$email_result = mail($email_recipient, $email_subject, $email_message, $email_headers);
+if ($email_result) {
+    $results['message'] = sprintf('Thank you for contacting me, %s. I will reply within 24 hours.', $visitor_name);
+} else {
+    $result['message'] = sprintf('Sorry! This email did not go through. Please try again.');
+}
+
+echo json_encode($results);
+
+// $email_result = mail($to, $email_title, $email_subject, $body, $email_headers);
+//     if($email_result){
+//         $results['message'] = sprintf('Thank you for contacting me, %s. I will get back to you as soon as I can!', $user_name);
+//     } else {
+//         $results['message'] = sprintf('I am sorry, but the email did not go through.');
+//         echo "email failed";
+//     }
+
+
 // echo $email_recipient;
 
 // // switch emails
@@ -81,45 +104,3 @@ $email_headers = array(
 //     }
 // }
 
-
-//send out the email
-$email_result = mail($email_recipient, $email_subject, $email_message, $email_headers);
-if ($email_result) {
-    $results['message'] = sprintf('Thank you for contacting me, %s. I will reply within 24 hours.', $visitor_name);
-} else {
-    $result['message'] = sprintf('Sorry! This email did not go through. Please try again.');
-}
-
-
-echo json_encode($results);
-
-// $email_result = mail($to, $email_title, $email_subject, $body, $email_headers);
-//     if($email_result){
-//         $results['message'] = sprintf('Thank you for contacting me, %s. I will get back to you as soon as I can!', $user_name);
-//     } else {
-//         $results['message'] = sprintf('I am sorry, but the email did not go through.');
-//         echo "email failed";
-//     }
-
-
-
-
-// recaptcha stuff
-
-// if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['recaptcha_response'])) {
-//     // Build POST request:
-//     $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
-//     $recaptcha_secret = '6LfbtGsdAAAAABkbR0RLpWVv5SYmSQNv0kX2HJr3';
-//     $recaptcha_response = $_POST['recaptcha_response'];
-
-//     // Make and decode POST request:
-//     $recaptcha = file_get_contents($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);
-//     $recaptcha = json_decode($recaptcha);
-
-//     // // Take action based on the score returned:
-//     // if ($recaptcha->score >= 0.5) {
-//     //     // Verified - send email
-//     // } else {
-//     //     // Not verified - show form error
-//     // }
-// }
