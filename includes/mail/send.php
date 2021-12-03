@@ -46,8 +46,12 @@ $results['email_error'] = $email_error;
 
 // prepare the email
 $email_subject = 'Inquiry from Portfolio Site';
-$email_recipient = 'duischlichting@eduardoschlichting.com';
-$email_message = sprintf('Name: %s, Email: %s, Message: %s', $visitor_name, $visitor_email, $visitor_message);
+$email_recipient = 'edu@eduardoschlichting.com';
+$email_message = '';
+$email_message .= 'From: '. $visitor_name . "\r\n";
+$email_message .= 'Email: '. $visitor_email . "\r\n";
+$email_message .= 'Message: '. $visitor_message . "\r\n";
+
 $email_headers = array(
 
     'From' =>$visitor_email
@@ -58,7 +62,7 @@ $email_headers = array(
 //send out the email
 $email_result = mail($email_recipient, $email_subject, $email_message, $email_headers);
 if ($email_result) {
-    $results['message'] = sprintf('Thank you for contacting me, %s. I will reply within 24 hours.', $visitor_name);
+    $results['message'] = sprintf('Thank you for contacting me, %s. I will get back to you as soon as I can! :D', $visitor_name);
 } else {
     $result['message'] = sprintf('Sorry! This email did not go through. Please try again.');
 }
