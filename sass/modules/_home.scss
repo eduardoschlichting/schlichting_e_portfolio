@@ -100,7 +100,7 @@
       transform: rotate(-90deg);
       transform-origin: center;
       font-size: 1rem;
-      color: $blue;
+      color: $purple;
       @include transition-ease;
       
     }
@@ -223,7 +223,7 @@
       }
     }
     p {
-      color: $blue;
+      color: $background;
     }
   }
 }

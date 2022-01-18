@@ -1,23 +1,23 @@
-<?php 
-    $db_dsn = array( 
-        'host' => 'localhost', // this will change when you go live
-        'dbname' => 'eduardz1_db_portfolio_live', // update this with your database name
-        'charset' => 'utf8'
-    );
+<?php
+$db_dsn = array(
+    'host' => 'localhost', // this will change when you go live
+    'dbname' => 'eduardz1_db_portfolio_live', // update this with your database name
+    'charset' => 'utf8'
+);
 
-    $dsn = 'mysql:'.http_build_query($db_dsn, '', ';');
+$dsn = 'mysql:' . http_build_query($db_dsn, '', ';');
 
-    //This is the DB credentials
+//This is the DB credentials
 
-    $db_user = 'eduardz1_portlive';
-    $db_pass = 'Mtk7958e!'; // windows users leave this blank
+$db_user = 'eduardz1_portlive';
+$db_pass = 'Mtk7958e!'; // windows users leave this blank
 
-    try{
-        $pdo = new PDO($dsn, $db_user, $db_pass); // make a connection
-        // var_dump($pdo);
-        // echo (in this case) is almost like console.log
-        // echo "you're in! enjoy the show";
-    } catch (PDOException $exception){
-        echo 'Connection Error:'.$exception->getMessage();
-        exit();
-    };
+try {
+    $pdo = new PDO($dsn, $db_user, $db_pass); // make a connection
+    // var_dump($pdo);
+    // echo (in this case) is almost like console.log
+    // echo "you're in! enjoy the show";
+} catch (PDOException $exception) {
+    echo 'Connection Error:' . $exception->getMessage();
+    exit();
+};

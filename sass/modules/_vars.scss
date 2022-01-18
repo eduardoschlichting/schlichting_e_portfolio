@@ -24,7 +24,7 @@ h2 {
 }
 
 h3 {
-  color: $blue;
+  color: $background;
   font-size: 1rem;
   font-weight: $regular;
   line-height: 1.5rem;
@@ -32,7 +32,7 @@ h3 {
 
 // use for the scroll down
 h4 {
-  color: $white;
+  color: $background;
   font-size: 0.8rem;
   font-weight: $regular;
   line-height: 1.875rem;
@@ -44,7 +44,7 @@ h5 {
 }
 
 p {
-  color: $white;
+  color: $background;
   font-size: 1rem;
   font-weight: $regular;
   line-height: 1.5rem;
@@ -57,10 +57,10 @@ p {
 }
 
 button {
-  border: 1px solid $blue;
+  border: 1px solid $purple;
   background: none;
   padding: 10px 40px;
-  color: $blue;
+  color: $purple;
   font-weight: $bold;
   margin: 0 auto;
   transition: all .8s ease-out;
@@ -69,6 +69,10 @@ button {
 button:hover {
   background-color: $blue;
   color: $purple;
+}
+
+.btn_hover {
+  transition: all .8s ease-out;
 }
 
 .noScroll {
